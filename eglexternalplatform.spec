@@ -1,10 +1,10 @@
-%global date 20180518
+%global date 20180914
 %global debug_package %{nil}
 
 Summary:	EGL External Platform Interface headers
 Name:		eglexternalplatform
 Version:	1.0
-Release:	0.%{date}.1
+Release:	0.%{date}.2
 Group:		System/Libraries
 License:	MIT
 URL:		https://github.com/NVIDIA

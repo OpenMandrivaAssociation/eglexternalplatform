@@ -1,15 +1,13 @@
-%global date 20180914
 %global debug_package %{nil}
 
 Summary:	EGL External Platform Interface headers
 Name:		eglexternalplatform
-Version:	1.0
-Release:	0.%{date}.2
+Version:	1.1
+Release:	1
 Group:		System/Libraries
 License:	MIT
 URL:		https://github.com/NVIDIA
-# git archive --format=tar --prefix=eglexternalplatform-1.0-$(date +%Y%m%d)/ HEAD | xz -vf > eglexternalplatform-1.0-$(date +%Y%m%d).tar.xz
-Source0:	%{name}-%{version}-%{date}.tar.xz
+Source0:	https://github.com/NVIDIA/eglexternalplatform/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
 BuildArch:	noarch
 
 %description
@@ -25,7 +23,7 @@ developing applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}-%{version}-%{date}
+%autosetup -n %{name}-%{version} -p1
 
 %build
 

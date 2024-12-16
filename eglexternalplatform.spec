@@ -32,10 +32,10 @@ developing applications that use %{name}.
 %meson_build
 
 %install
-%meson_build
+%meson_install
 
 %files devel
 %doc README.md samples
 %license COPYING
-#{_includedir}/*
-#{_datadir}/pkgconfig/eglexternalplatform.pc
+%{_includedir}/*
+%{_datadir}/pkgconfig/eglexternalplatform.pc

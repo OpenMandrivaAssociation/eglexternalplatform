@@ -2,13 +2,15 @@
 
 Summary:	EGL External Platform Interface headers
 Name:		eglexternalplatform
-Version:	1.1
-Release:	2
+Version:	1.2
+Release:	1
 Group:		System/Libraries
 License:	MIT
 URL:		https://github.com/NVIDIA
 Source0:	https://github.com/NVIDIA/eglexternalplatform/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
-BuildArch:	noarch
+Patch0:         https://src.fedoraproject.org/rpms/eglexternalplatform/blob/rawhide/f/eglexternalplatform-noarch.patch
+BuildRequires:  meson
+BuildArch:      noarch
 
 %description
 %summary.
@@ -26,13 +28,11 @@ developing applications that use %{name}.
 %autosetup -n %{name}-%{version} -p1
 
 %build
+%meson
+%meson_build
 
 %install
-mkdir -p %{buildroot}%{_includedir}/
-install -p -m 0644 interface/eglexternalplatform.h %{buildroot}%{_includedir}/
-install -p -m 0644 interface/eglexternalplatformversion.h %{buildroot}%{_includedir}/
-mkdir -p %{buildroot}%{_datadir}/pkgconfig/
-install -p -m 0644 eglexternalplatform.pc %{buildroot}%{_datadir}/pkgconfig/
+%meson_build
 
 %files devel
 %doc README.md samples

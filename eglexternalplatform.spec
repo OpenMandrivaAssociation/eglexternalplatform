@@ -37,5 +37,5 @@ developing applications that use %{name}.
 %files devel
 %doc README.md samples
 %license COPYING
-%{_includedir}/*
-%{_datadir}/pkgconfig/eglexternalplatform.pc
+#{_includedir}/*
+#{_datadir}/pkgconfig/eglexternalplatform.pc

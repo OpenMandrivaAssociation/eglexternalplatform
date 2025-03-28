@@ -2,7 +2,7 @@
 
 Summary:	EGL External Platform Interface headers
 Name:		eglexternalplatform
-Version:	1.2
+Version:	1.2.1
 Release:	1
 Group:		System/Libraries
 License:	MIT

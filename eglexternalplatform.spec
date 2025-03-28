@@ -8,7 +8,6 @@ Group:		System/Libraries
 License:	MIT
 URL:		https://github.com/NVIDIA
 Source0:	https://github.com/NVIDIA/eglexternalplatform/archive/refs/tags/%{version}/%{name}-%{version}.tar.gz
-Patch0:         https://src.fedoraproject.org/rpms/eglexternalplatform/blob/rawhide/f/eglexternalplatform-noarch.patch
 BuildRequires:  meson
 BuildArch:      noarch
 
